@@ -1,13 +1,16 @@
 version: '3'
 services:
-  oracle-partitions:
-    image: gvenzl/oracle-xe:21
-    container_name: oracle-partitions
+  oracle-polrouteds:
+    image: container-registry.oracle.com/database/enterprise:latest
+    container_name: oracle-polrouteds
     environment:
-      - ORACLE_PASSWORD=PASSPASS
+      - ORACLE_SID=PolRouteDS
+      - ORACLE_PWD=PASSPASS
     volumes:
       - ./csv:/tmp/csv
       - ./scripts:/tmp/scripts
       - ./data:/opt/oracle/oradata
     ports: 
       - "1521:1521"
+      - "5500:5500"
+    

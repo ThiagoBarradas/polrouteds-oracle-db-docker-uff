@@ -23,13 +23,15 @@ namespace PolRouteDSOracleImporter.Models
 
         public string GenerateInsertQuery(OracleCommand command)
         {
+            var table = "PolRouteDS_time" + Consts.TableSuffix;
+
             command.Parameters.Add(":ID", this.Id);
             command.Parameters.Add(":PERIOD", this.Period);
             command.Parameters.Add(":DAY", this.Day);
             command.Parameters.Add(":MONTH", this.Month);
             command.Parameters.Add(":YEAR", this.Year);
             command.Parameters.Add(":WEEKDAY", this.Weekday);
-            return $"INSERT INTO PolRouteDS_time VALUES (:ID,:PERIOD,:DAY,:MONTH,:YEAR,:WEEKDAY)";
+            return $"INSERT INTO {table} (ID,PERIOD,DAY,MONTH,YEAR,WEEKDAY) VALUES (:ID,:PERIOD,:DAY,:MONTH,:YEAR,:WEEKDAY)";
         }
     }
 }

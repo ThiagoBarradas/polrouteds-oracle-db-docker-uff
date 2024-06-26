@@ -23,6 +23,8 @@ namespace PolRouteDSOracleImporter.Models
 
         public string GenerateInsertQuery(OracleCommand command)
         {
+            var table = "PolRouteDS_crime" + Consts.TableSuffix;
+
             command.Parameters.Add(":ID", this.Id);
             command.Parameters.Add(":TOTALFEMINICIDE", this.TotalFeminicide);
             command.Parameters.Add(":TOTALHOMICIDE", this.TotalHomicide);
@@ -34,7 +36,7 @@ namespace PolRouteDSOracleImporter.Models
             command.Parameters.Add(":TOTALARMEDROBBERYAUTO", this.TotalArmedRobberyAuto);
             command.Parameters.Add(":SEGMENTID", this.SegmentId);
             command.Parameters.Add(":TIMEID", this.TimeId);
-            return $"INSERT INTO PolRouteDS_crime VALUES (:ID,:TOTALFEMINICIDE,:TOTALHOMICIDE,:TOTALFELONYMURDER,:TOTALBODILYHARM,:TOTALTHEFTCELLPHONE,:TOTALARMEDROBBERYCELLPHONE,:TOTALTHEFTAUTO,:TOTALARMEDROBBERYAUTO,:SEGMENTID,:TIMEID)";
+            return $"INSERT INTO {table} VALUES (:ID,:TOTALFEMINICIDE,:TOTALHOMICIDE,:TOTALFELONYMURDER,:TOTALBODILYHARM,:TOTALTHEFTCELLPHONE,:TOTALARMEDROBBERYCELLPHONE,:TOTALTHEFTAUTO,:TOTALARMEDROBBERYAUTO,:SEGMENTID,:TIMEID)";
         }
     }
 }

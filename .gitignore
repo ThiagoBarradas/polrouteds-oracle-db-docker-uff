@@ -1,3 +1,6 @@
 csv/*
 data/*
+oracle/*
+mysql-files/*
+new-oracle*
 .idea

@@ -9,7 +9,7 @@ using System.Globalization;
 Console.WriteLine("PolRouteDS Oracle Importer Start!");
 
 var csvDir = "C:\\GIT\\oracle-partitions\\csv\\";
-string connString = "DATA SOURCE=localhost:1521/xe; PERSIST SECURITY INFO=True;USER ID=MYUSER; password=PASSPASS; Pooling = False;";
+string connString = "DATA SOURCE=localhost:1521/PolRouteDS; PERSIST SECURITY INFO=True;USER ID=SYSTEM; password=PASSPASS; Pooling = False;";
 
 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
 {
@@ -17,13 +17,25 @@ var config = new CsvConfiguration(CultureInfo.InvariantCulture)
     Delimiter = ";"
 };
 
+// empty to import common data, "_frag" to import fragmented base
+Consts.TableSuffix = "_frag";
+
 var tables = new List<ITable>();
-tables.Add(new Table<District>());
-tables.Add(new Table<Neighborhood>());
-tables.Add(new Table<Time>());
-tables.Add(new Table<Vertice>());
-tables.Add(new Table<Segment>());
-tables.Add(new Table<Crime>());
+
+if (Consts.TableSuffix == "_frag")
+{ 
+    tables.Add(new Table<Time>());
+    tables.Add(new Table<Crime>());
+}
+else
+{
+    tables.Add(new Table<District>());
+    tables.Add(new Table<Neighborhood>());
+    tables.Add(new Table<Time>());
+    tables.Add(new Table<Vertice>());
+    tables.Add(new Table<Segment>());
+    tables.Add(new Table<Crime>());
+}
 
 try
 {
@@ -40,13 +52,6 @@ try
             {
                 connection.Open();
                 Console.WriteLine("Writing " + table.Name + " Start!");
-
-                using (OracleCommand command = new OracleCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "TRUNCATE TABLE " + table.TableName;
-                    command.ExecuteNonQuery();
-                }
 
                 foreach (var record in records)
                 {

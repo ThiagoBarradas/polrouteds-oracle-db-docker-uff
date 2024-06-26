@@ -1,10 +1,3 @@
-DROP TABLE PolRouteDS_crime;
-DROP TABLE PolRouteDS_segment;
-DROP TABLE PolRouteDS_time;
-DROP TABLE PolRouteDS_vertice;
-DROP TABLE PolRouteDS_neighborhood;
-DROP TABLE PolRouteDS_district;
-
 CREATE TABLE PolRouteDS_district
 (
     id integer,

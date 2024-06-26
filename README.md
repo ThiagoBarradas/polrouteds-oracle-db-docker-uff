@@ -2,12 +2,18 @@
 
 - 1: Clone this repo
 - 2: Download and unzip the follow file:
-  - https://drive.google.com/file/d/10DNfIyt6E3HSpPSidIyjeKXEH2amB9nE/view?usp=drive_link
+  - https://drive.google.com/file/d/1-oKNmerclCu0zz0-Ez2q5lEfnBdLKVuk/view?usp=drive_link
 - 3: Put dirs `data` and `csv` into the cloned project.
+- 4: Create a Oracle Account and do the login in docker
+  - Create account here https://profile.oracle.com/myprofile/account/create-account.jspx
+  - Sign in here https://container-registry.oracle.com
+  - Click in `Database` and in `enterprise` click and `continue` to accept terms (for educational purposes)
+  - Scroll down and click `accept`.
+  - Execute `docker login container-registry.oracle.com` and insert your credentials
 - 4: Run Oracle DB with this command and wait a few moments to initialize. 
    - `docker-compose up -d`
 - 5: Open shell to execute queries:
-   - `docker exec -it --user=oracle oracle-partitions sqlplus MYUSER/PASSPASS@localhost`
+   - `docker exec -it --user=oracle oracle-polrouteds sqlplus SYSTEM/PASSPASS@localhost:1521/PolRouteDS`
 
 ### Oracle SQL Developer 
 
@@ -17,13 +23,13 @@ You can use official Oracle SQL Developer tool (native or vscode extension). Ple
 Connection Info
 - authentication type: `Default`
 - role: `Default`
-- user: `MYUSER`
+- user: `SYSTEM`
 - pass: `PASSPASS`
 - host: `localhost`
 - port: `1521`
 - connection type: `Basic`
 - type: `SID`
-- sid: `xe`
+- sid: `PolRouteDS`
 
 ### Initializing Database Schema and Importing Data
 
@@ -31,7 +37,7 @@ Don't worry. All data are already imported and you only need to run previous com
 
 Exists a dotnet project to import data. You can found in ./importer, but it has no docker configuration yet. With oracle-partitions running, you need to execute the follow command and wait some minutes (maybe hours).
 
-`docker exec -it --user=oracle oracle-partitions bash /tmp/scripts/setup.sh`
+`docker exec -it --user=oracle oracle-polrouteds bash /tmp/scripts/setup.sh`
 
 And after it, execute dotnet project adjusting `csvDir` to point to csv dir.
 
