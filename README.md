@@ -43,12 +43,17 @@ And after it, execute dotnet project adjusting `csvDir` to point to csv dir.
 
 ## Database Tables
 
+Not partitioned
 - `PolRouteDS_crime`
 - `PolRouteDS_segment`
 - `PolRouteDS_time`
 - `PolRouteDS_vertice`
 - `PolRouteDS_neighborhood`
 - `PolRouteDS_district`
+
+Partitioned
+- `PolRouteDS_crime_frag`
+- `PolRouteDS_time_frag`
 
 ## Datasource - PolRouteDS CSV
 

@@ -23,11 +23,11 @@ WHERE
 	t.year = 2016
 GROUP BY
 	s.id;
---[2024-06-26 20:44:03] 500 rows retrieved starting from 1 in 40 s 111 ms (execution: 39 s 956 ms, fetching: 155 ms)
---[2024-06-26 20:44:59] 500 rows retrieved starting from 1 in 38 s 183 ms (execution: 38 s 83 ms, fetching: 100 ms)
---[2024-06-26 20:47:32] 500 rows retrieved starting from 1 in 43 s 345 ms (execution: 43 s 234 ms, fetching: 111 ms)
---[2024-06-26 20:49:16] 500 rows retrieved starting from 1 in 40 s 421 ms (execution: 40 s 361 ms, fetching: 60 ms)
---[2024-06-26 20:52:24] 500 rows retrieved starting from 1 in 39 s 543 ms (execution: 39 s 448 ms, fetching: 95 ms)
+-- 500 rows retrieved starting from 1 in 40 s 111 ms (execution: 39 s 956 ms, fetching: 155 ms)
+-- 500 rows retrieved starting from 1 in 38 s 183 ms (execution: 38 s 83 ms, fetching: 100 ms)
+-- 500 rows retrieved starting from 1 in 43 s 345 ms (execution: 43 s 234 ms, fetching: 111 ms)
+-- 500 rows retrieved starting from 1 in 40 s 421 ms (execution: 40 s 361 ms, fetching: 60 ms)
+-- 500 rows retrieved starting from 1 in 39 s 543 ms (execution: 39 s 448 ms, fetching: 95 ms)
 
 -- PARTITIONED
 SELECT

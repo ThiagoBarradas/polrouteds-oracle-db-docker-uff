@@ -58,8 +58,3 @@ GROUP BY
 --[2024-06-26 21:19:49] 500 rows retrieved starting from 1 in 29 s 855 ms (execution: 29 s 802 ms, fetching: 53 ms)
 --[2024-06-26 21:23:31] 500 rows retrieved starting from 1 in 28 s 233 ms (execution: 28 s 187 ms, fetching: 46 ms)
 --[2024-06-26 21:24:31] 500 rows retrieved starting from 1 in 27 s 485 ms (execution: 27 s 440 ms, fetching: 45 ms)
-
-
-
-
-

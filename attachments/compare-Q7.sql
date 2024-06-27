@@ -56,3 +56,4 @@ OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY;
 --[2024-06-26 21:48:29] 10 rows retrieved starting from 1 in 103 ms (execution: 81 ms, fetching: 22 ms)
 --[2024-06-26 21:49:19] 10 rows retrieved starting from 1 in 127 ms (execution: 102 ms, fetching: 25 ms)
 --[2024-06-26 21:47:50] 10 rows retrieved starting from 1 in 141 ms (execution: 108 ms, fetching: 33 ms)
+

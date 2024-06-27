@@ -38,8 +38,3 @@ WHERE
 --[2024-06-26 21:28:20] 1 row retrieved starting from 1 in 3 s 639 ms (execution: 3 s 617 ms, fetching: 22 ms)
 --[2024-06-26 21:28:33] 1 row retrieved starting from 1 in 3 s 697 ms (execution: 3 s 673 ms, fetching: 24 ms)
 --[2024-06-26 21:28:47] 1 row retrieved starting from 1 in 3 s 658 ms (execution: 3 s 639 ms, fetching: 19 ms)
-
-
-
-
-
