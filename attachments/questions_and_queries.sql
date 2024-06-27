@@ -78,7 +78,7 @@ FROM
 	PolRouteDS_time t ON c.time_id = t.id INNER JOIN 
 	PolRouteDS_segment s ON c.segment_id = s.id 
 WHERE 
-	s.oneway = 'yes' AND
+	s.oneway IN ('yes', 'oneway') AND
 	t.year = 2012;
 
 -- 5. Qual o total de roubos de carro e celular em todos os segmentos durante o ano de 2017?

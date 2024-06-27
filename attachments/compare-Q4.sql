@@ -16,7 +16,7 @@ FROM
 	PolRouteDS_time t ON c.time_id = t.id INNER JOIN
 	PolRouteDS_segment s ON c.segment_id = s.id
 WHERE
-	s.oneway = 'yes' AND
+	s.oneway IN ('yes', 'oneway') AND
 	t.year = 2012;
 --[2024-06-26 21:29:47] 1 row retrieved starting from 1 in 4 s 851 ms (execution: 4 s 816 ms, fetching: 35 ms)
 --[2024-06-26 21:30:03] 1 row retrieved starting from 1 in 4 s 515 ms (execution: 4 s 490 ms, fetching: 25 ms)
@@ -39,7 +39,7 @@ FROM
 	PolRouteDS_time_frag t ON c.time_id = t.id INNER JOIN
 	PolRouteDS_segment s ON c.segment_id = s.id
 WHERE
-	s.oneway = 'yes' AND
+	s.oneway IN ('yes', 'oneway') AND
 	t.year = 2012;
 --[2024-06-26 21:31:56] 1 row retrieved starting from 1 in 1 s 234 ms (execution: 1 s 205 ms, fetching: 29 ms)
 --[2024-06-26 21:32:04] 1 row retrieved starting from 1 in 1 s 471 ms (execution: 1 s 443 ms, fetching: 28 ms)
