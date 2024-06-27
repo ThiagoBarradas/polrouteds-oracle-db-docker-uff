@@ -18,7 +18,11 @@ FROM
 WHERE
 	s.oneway = 'yes' AND
 	t.year = 2012;
---[2024-06-26 14:42:37] 1 row retrieved starting from 1 in 4 s 161 ms (execution: 4 s 126 ms, fetching: 35 ms)
+--[2024-06-26 21:29:47] 1 row retrieved starting from 1 in 4 s 851 ms (execution: 4 s 816 ms, fetching: 35 ms)
+--[2024-06-26 21:30:03] 1 row retrieved starting from 1 in 4 s 515 ms (execution: 4 s 490 ms, fetching: 25 ms)
+--[2024-06-26 21:30:13] 1 row retrieved starting from 1 in 4 s 238 ms (execution: 4 s 215 ms, fetching: 23 ms)
+--[2024-06-26 21:30:27] 1 row retrieved starting from 1 in 5 s 726 ms (execution: 5 s 705 ms, fetching: 21 ms)
+--[2024-06-26 21:30:41] 1 row retrieved starting from 1 in 5 s 44 ms (execution: 5 s 19 ms, fetching: 25 ms)
 
 -- PARTITIONED
 SELECT
@@ -37,4 +41,8 @@ FROM
 WHERE
 	s.oneway = 'yes' AND
 	t.year = 2012;
---[2024-06-26 14:45:34] 1 row retrieved starting from 1 in 982 ms (execution: 945 ms, fetching: 37 ms)
+--[2024-06-26 21:31:56] 1 row retrieved starting from 1 in 1 s 234 ms (execution: 1 s 205 ms, fetching: 29 ms)
+--[2024-06-26 21:32:04] 1 row retrieved starting from 1 in 1 s 471 ms (execution: 1 s 443 ms, fetching: 28 ms)
+--[2024-06-26 21:32:13] 1 row retrieved starting from 1 in 1 s 205 ms (execution: 1 s 183 ms, fetching: 22 ms)
+--[2024-06-26 21:32:23] 1 row retrieved starting from 1 in 1 s 281 ms (execution: 1 s 254 ms, fetching: 27 ms)
+--[2024-06-26 21:33:06] 1 row retrieved starting from 1 in 1 s 282 ms (execution: 1 s 239 ms, fetching: 43 ms)

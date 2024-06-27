@@ -14,7 +14,11 @@ FROM
 WHERE
 	n.name = 'Santa Efig�nia' AND
 	t.year = 2015;
---[2024-06-26 14:17:09] 1 row retrieved starting from 1 in 8 s 696 ms (execution: 8 s 678 ms, fetching: 18 ms)
+--[2024-06-26 21:25:49] 1 row retrieved starting from 1 in 5 s 982 ms (execution: 5 s 954 ms, fetching: 28 ms)
+--[2024-06-26 21:26:04] 1 row retrieved starting from 1 in 5 s 497 ms (execution: 5 s 470 ms, fetching: 27 ms)
+--[2024-06-26 21:26:21] 1 row retrieved starting from 1 in 5 s 635 ms (execution: 5 s 615 ms, fetching: 20 ms)
+--[2024-06-26 21:26:37] 1 row retrieved starting from 1 in 5 s 282 ms (execution: 5 s 256 ms, fetching: 26 ms)
+--[2024-06-26 21:26:59] 1 row retrieved starting from 1 in 5 s 321 ms (execution: 5 s 302 ms, fetching: 19 ms)
 
 -- PARTITIONED
 SELECT
@@ -29,4 +33,13 @@ FROM
 WHERE
 	n.name = 'Santa Efig�nia' AND
 	t.year = 2015;
---[2024-06-26 14:42:11] 1 row retrieved starting from 1 in 2 s 964 ms (execution: 2 s 938 ms, fetching: 26 ms)
+--[2024-06-26 21:27:54] 1 row retrieved starting from 1 in 3 s 141 ms (execution: 3 s 110 ms, fetching: 31 ms)
+--[2024-06-26 21:28:07] 1 row retrieved starting from 1 in 3 s 382 ms (execution: 3 s 364 ms, fetching: 18 ms)
+--[2024-06-26 21:28:20] 1 row retrieved starting from 1 in 3 s 639 ms (execution: 3 s 617 ms, fetching: 22 ms)
+--[2024-06-26 21:28:33] 1 row retrieved starting from 1 in 3 s 697 ms (execution: 3 s 673 ms, fetching: 24 ms)
+--[2024-06-26 21:28:47] 1 row retrieved starting from 1 in 3 s 658 ms (execution: 3 s 639 ms, fetching: 19 ms)
+
+
+
+
+

@@ -7,7 +7,6 @@ services:
       - ORACLE_SID=PolRouteDS
       - ORACLE_PWD=PASSPASS
     volumes:
-      - ./csv:/tmp/csv
       - ./scripts:/tmp/scripts
       - ./data:/opt/oracle/oradata
     ports: 

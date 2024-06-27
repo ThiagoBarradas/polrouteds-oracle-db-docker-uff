@@ -23,12 +23,11 @@ WHERE
 	t.year = 2016
 GROUP BY
 	s.id;
---[2024-06-26 20:44:03] 500 rows retrieved starting from 1 in 37 s 111 ms (execution: 36 s 956 ms, fetching: 155 ms)
---[2024-06-26 20:44:59] 500 rows retrieved starting from 1 in 35 s 183 ms (execution: 35 s 83 ms, fetching: 100 ms)
+--[2024-06-26 20:44:03] 500 rows retrieved starting from 1 in 40 s 111 ms (execution: 39 s 956 ms, fetching: 155 ms)
+--[2024-06-26 20:44:59] 500 rows retrieved starting from 1 in 38 s 183 ms (execution: 38 s 83 ms, fetching: 100 ms)
 --[2024-06-26 20:47:32] 500 rows retrieved starting from 1 in 43 s 345 ms (execution: 43 s 234 ms, fetching: 111 ms)
-
-
-
+--[2024-06-26 20:49:16] 500 rows retrieved starting from 1 in 40 s 421 ms (execution: 40 s 361 ms, fetching: 60 ms)
+--[2024-06-26 20:52:24] 500 rows retrieved starting from 1 in 39 s 543 ms (execution: 39 s 448 ms, fetching: 95 ms)
 
 -- PARTITIONED
 SELECT
@@ -52,4 +51,12 @@ WHERE
 	t.year = 2016
 GROUP BY
 	s.id;
--- [2024-06-26 14:11:06] 500 rows retrieved starting from 1 in 24 s 477 ms (execution: 24 s 414 ms, fetching: 63 ms)
+--[2024-06-26 20:53:26] 500 rows retrieved starting from 1 in 28 s 477 ms (execution: 28 s 414 ms, fetching: 63 ms)
+--[2024-06-26 20:54:35] 500 rows retrieved starting from 1 in 32 s 509 ms (execution: 32 s 434 ms, fetching: 65 ms)
+--[2024-06-26 20:55:30] 500 rows retrieved starting from 1 in 31 s 94 ms (execution: 31 s 41 ms, fetching: 53 ms)
+--[2024-06-26 20:56:21] 500 rows retrieved starting from 1 in 31 s 59 ms (execution: 30 s 973 ms, fetching: 86 ms)
+--[2024-06-26 20:57:13] 500 rows retrieved starting from 1 in 32 s 397 ms (execution: 32 s 336 ms, fetching: 61 ms)
+
+
+
+
